@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="card">
+        <img src="avatar.png" alt="Моё фото" class="avatar">
+
+        <h1>Привет! Ты на моём сайте </h1>
+        <p> Я заполучил все твои данный пароли хахаххаха 🤡 🚀</p>
+
+        <input type="text" id="nameInput" placeholder="Введите ваше имя">
+        <button onclick="showMessage()">Поздороваться</button>
+
+        <p id="message" class="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("nameInput").value;
+            let message = document.getElementById("message");
+
+            if (name === "") {
+                message.textContent = "Пожалуйста, введите имя 🙂";
+            } else {
+                message.textContent = "Приятно познакомиться, " + name + "!";
+            }
+        }
+    </script>
+
+</body>
+</html>
